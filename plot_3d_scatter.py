@@ -1,3 +1,4 @@
+import streamlit as st
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
@@ -53,4 +54,6 @@ def plot_3d_scatter(x_coords, y_coords, z_coords, color_values, title="3D Point 
     colorbar = plt.colorbar(scatter, ax=ax, pad=0.1, shrink=0.8)
     colorbar.set_label(color_label)
 
-    plt.show()
+    # Display in Streamlit
+    st.pyplot(fig)
+    #plt.show()
